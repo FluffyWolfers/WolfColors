@@ -39,7 +39,7 @@ public class WCListener implements Listener{
 						
 						pla.add(p);
 						
-						p.sendMessage(ChatColor.GOLD + "Choose a color: " + ChatColor.BLUE + "blue, " + ChatColor.LIGHT_PURPLE + "pink, " + ChatColor.DARK_GREEN + "green, " + ChatColor.GREEN + "lime, " + ChatColor.GOLD + "orange, " + ChatColor.RED + "red, " + ChatColor.YELLOW + "yellow, or" + ChatColor.DARK_PURPLE + "purple");
+						p.sendMessage(ChatColor.GOLD + "Choose a color: " + ChatColor.BLUE + "blue, " + ChatColor.LIGHT_PURPLE + "pink, " + ChatColor.DARK_GREEN + "green, " + ChatColor.GREEN + "lime, " + ChatColor.GOLD + "orange, " + ChatColor.RED + "red, " + ChatColor.YELLOW + "yellow, or " + ChatColor.DARK_PURPLE + "purple");
 						
 					}else{
 						p.sendMessage(ChatColor.DARK_RED + "Not yours!");
@@ -77,22 +77,31 @@ public class WCListener implements Listener{
 				
 				if(msg.equalsIgnoreCase("blue")){
 					wolf.setCollarColor(DyeColor.BLUE);
+					pla.remove(p);
 				}else if(msg.equalsIgnoreCase("green")){
 					wolf.setCollarColor(DyeColor.GREEN);
+					pla.remove(p);
 				}else if(msg.equalsIgnoreCase("red")){
 					wolf.setCollarColor(DyeColor.RED);
+					pla.remove(p);
 				}else if(msg.equalsIgnoreCase("yellow")){
 					wolf.setCollarColor(DyeColor.YELLOW);
+					pla.remove(p);
 				}else if(msg.equalsIgnoreCase("aqua")){
 					wolf.setCollarColor(DyeColor.LIGHT_BLUE);
+					pla.remove(p);
 				}else if(msg.equalsIgnoreCase("purple")){
 					wolf.setCollarColor(DyeColor.PURPLE);
+					pla.remove(p);
 				}else if(msg.equalsIgnoreCase("lightgreen")){
 					wolf.setCollarColor(DyeColor.LIME);
+					pla.remove(p);
 				}else if(msg.equalsIgnoreCase("orange")){
 					wolf.setCollarColor(DyeColor.ORANGE);
+					pla.remove(p);
 				}else if(msg.equalsIgnoreCase("pink")){
 					wolf.setCollarColor(DyeColor.PINK);
+					pla.remove(p);
 				}else{
 					p.sendMessage(ChatColor.DARK_RED + "Not a color! Please choose again!");
 					p.sendMessage(ChatColor.GOLD + "Choose a color: " + ChatColor.BLUE + "blue, " + ChatColor.LIGHT_PURPLE + "pink, " + ChatColor.DARK_GREEN + "green, " + ChatColor.GREEN + "lime, " + ChatColor.GOLD + "orange, " + ChatColor.RED + "red, " + ChatColor.YELLOW + "yellow, or" + ChatColor.DARK_PURPLE + "purple");
