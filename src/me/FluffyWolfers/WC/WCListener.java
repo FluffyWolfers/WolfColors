@@ -27,35 +27,35 @@ public class WCListener implements Listener{
 		Player p = e.getPlayer();
 		Entity clicked = e.getRightClicked();
 		
-		if(clicked instanceof Wolf){
-			
-			if(((Wolf) clicked).isTamed()){
+		if(p.getItemInHand().getType().equals(Material.STICK)){
+		
+			if(clicked instanceof Wolf){
 				
-				if(((Wolf) clicked).getOwner().equals(p)){
+				if(((Wolf) clicked).isTamed()){
+					
+					if(((Wolf) clicked).getOwner().equals(p)){
 
-					en = clicked;
+						en = clicked;
+						
+						pla.add(p);
+						
+						p.sendMessage(ChatColor.GOLD + "Choose a color: " + ChatColor.BLUE + "blue, " + ChatColor.LIGHT_PURPLE + "pink, " + ChatColor.DARK_GREEN + "green, " + ChatColor.GREEN + "lime, " + ChatColor.GOLD + "orange, " + ChatColor.RED + "red, " + ChatColor.YELLOW + "yellow, or" + ChatColor.DARK_PURPLE + "purple");
+						
+					}else{
+						p.sendMessage(ChatColor.DARK_RED + "Not yours!");
+						return;
+					}
 					
 				}else{
-					p.sendMessage(ChatColor.DARK_RED + "Not yours!");
+					p.sendMessage(ChatColor.DARK_RED + "Not tamed!");
 					return;
 				}
 				
 			}else{
-				p.sendMessage(ChatColor.DARK_RED + "Not tamed!");
+				p.sendMessage(ChatColor.DARK_RED + "Not a wolf!");
 				return;
 			}
-			
-		}else{
-			p.sendMessage(ChatColor.DARK_RED + "Not a wolf!");
-			return;
-		}
 		
-		if(p.getItemInHand().getType().equals(Material.STICK)){
-			
-			pla.add(p);
-			
-			p.sendMessage(ChatColor.GOLD + "Choose a color: " + ChatColor.BLUE + "blue, " + ChatColor.LIGHT_PURPLE + "pink, " + ChatColor.DARK_GREEN + "green, " + ChatColor.GREEN + "lime, " + ChatColor.GOLD + "orange, " + ChatColor.RED + "red, " + ChatColor.YELLOW + "yellow, or" + ChatColor.DARK_PURPLE + "purple");
-			
 		}
 		
 	}
