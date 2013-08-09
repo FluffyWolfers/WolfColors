@@ -1,3 +1,6 @@
 name: WolfColors
 main: me.FluffyWolfers.WC.WC
 version: 1.0
+permissions:
+  wolfcolors.color:
+    default: true
