@@ -65,7 +65,7 @@ public class WCListener implements Listener{
 		
 		Player p = e.getPlayer();
 		String msgStr = e.getMessage();
-		String msg = msgStr.toLowerCase();
+		String msg = ChatColor.stripColor(msgStr.toLowerCase());
 		
 		if(pla.contains(p)){
 			
@@ -74,6 +74,8 @@ public class WCListener implements Listener{
 			if(en instanceof Wolf){
 				
 				Wolf wolf = (Wolf) en;
+				
+				p.sendMessage(msgStr);
 				
 				if(msg.equalsIgnoreCase("blue")){
 					wolf.setCollarColor(DyeColor.BLUE);
@@ -104,7 +106,7 @@ public class WCListener implements Listener{
 					pla.remove(p);
 				}else{
 					p.sendMessage(ChatColor.DARK_RED + "Not a color! Please choose again!");
-					p.sendMessage(ChatColor.GOLD + "Choose a color: " + ChatColor.BLUE + "blue, " + ChatColor.LIGHT_PURPLE + "pink, " + ChatColor.DARK_GREEN + "green, " + ChatColor.GREEN + "lime, " + ChatColor.GOLD + "orange, " + ChatColor.RED + "red, " + ChatColor.YELLOW + "yellow, or" + ChatColor.DARK_PURPLE + "purple");
+					p.sendMessage(ChatColor.GOLD + "Choose a color: " + ChatColor.BLUE + "blue, " + ChatColor.LIGHT_PURPLE + "pink, " + ChatColor.DARK_GREEN + "green, " + ChatColor.GREEN + "lime, " + ChatColor.GOLD + "orange, " + ChatColor.RED + "red, " + ChatColor.YELLOW + "yellow, or " + ChatColor.DARK_PURPLE + "purple");
 				}
 				
 			}
