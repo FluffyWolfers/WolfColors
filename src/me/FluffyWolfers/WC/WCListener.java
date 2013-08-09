@@ -83,6 +83,9 @@ public class WCListener implements Listener{
 				}else if(msg.equalsIgnoreCase("green")){
 					wolf.setCollarColor(DyeColor.GREEN);
 					pla.remove(p);
+				}else if(msg.equalsIgnoreCase("lime")){
+					wolf.setCollarColor(DyeColor.LIME);
+					pla.remove(p);
 				}else if(msg.equalsIgnoreCase("red")){
 					wolf.setCollarColor(DyeColor.RED);
 					pla.remove(p);
