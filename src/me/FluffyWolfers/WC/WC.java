@@ -14,7 +14,7 @@ public class WC extends JavaPlugin{
 		w = this;
 		pdf = this.getDescription();
 		
-		Bukkit.getLogger().info("[WolfColors v" + pdf.getVersion() + "] Starting up...");
+		Bukkit.getLogger().info("[ColorYourWolf v" + pdf.getVersion() + "] Starting up...");
 
 		this.getServer().getPluginManager().registerEvents(new WCListener(), this);
 

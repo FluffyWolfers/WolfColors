@@ -1,6 +1,6 @@
-name: WolfColors
+name: ColorYourWolf
 main: me.FluffyWolfers.WC.WC
 version: 1.0
 permissions:
-  wolfcolors.color:
+  cyw.color:
     default: true

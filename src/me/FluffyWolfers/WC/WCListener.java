@@ -27,7 +27,7 @@ public class WCListener implements Listener{
 		Player p = e.getPlayer();
 		Entity clicked = e.getRightClicked();
 		
-		if(p.hasPermission("wolfcolors.color")){
+		if(p.hasPermission("cyw.color")){
 			
 			if(p.getItemInHand().getType().equals(Material.STICK)){
 				
@@ -71,7 +71,7 @@ public class WCListener implements Listener{
 		String msgStr = e.getMessage();
 		String msg = ChatColor.stripColor(msgStr.toLowerCase());
 		
-		if(p.hasPermission("wolfcolors.color")){
+		if(p.hasPermission("cyw.color")){
 			
 			if(pla.contains(p)){
 				
